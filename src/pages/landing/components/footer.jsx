@@ -63,12 +63,12 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Contact Information */}
-          <div className="text-center md:text-left mb-8 md:mb-0">
+          <div className="items-end md:text-left mb-8 md:mb-0">
             <h3 className="text-xl font-semibold mb-4 text-white">Have a Question?</h3>
             <ul className="space-y-4">
               <li>
                 <span className="text-gray-300">
-                  203 Fake St. Mountain View, San Francisco, California, USA
+                  Greater Accra, Ghana.
                 </span>
               </li>
               <li>
