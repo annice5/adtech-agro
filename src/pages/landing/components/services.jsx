@@ -65,11 +65,7 @@ const Services = () => {
               <p className="text-gray-600 mt-2 text-sm">{service.description}</p>
 
               {/* Learn More Button */}
-              <div className="mt-4">
-                <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transform transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+             
             </div>
           ))}
         </div>

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-green-600 to-green-700 text-white py-10">
       <div className="container mx-auto px-6">
         {/* Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 md:gap-0">
           {/* Column 1: Brand and Description */}
           <div className="mb-8 md:mb-0 flex flex-col items-start">
             <h2 className="text-3xl font-bold mb-4 text-white">AdtechAgro</h2>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Explore */}
-          <div className="text-center mb-8 md:mb-0">
+          <div className="text-center md:text-left mb-8 md:mb-0">
             <h3 className="text-xl font-semibold mb-4 text-white">Explore</h3>
             <ul className="space-y-2">
               <li>

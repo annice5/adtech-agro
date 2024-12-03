@@ -1,5 +1,6 @@
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Testimonials from "./testimonials";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-8">
           <li>
             <a
-              href="#"
+              href="#home"
               className="text-yellow-400 px-3 py-2 font-semibold rounded-md hover:text-white transition duration-300"
             >
               HOME
@@ -30,7 +31,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#about"
               className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               ABOUT
@@ -38,7 +39,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#services"
               className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               SERVICES
@@ -46,7 +47,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#products"
               className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               PRODUCTS
@@ -54,7 +55,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#testimonials"
               className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               TESTIMONIAL
@@ -83,7 +84,7 @@ const Navbar = () => {
         <ul className="md:hidden bg-gradient-to-r from-green-600 to-green-500 text-white space-y-4 px-4 py-6 transform transition duration-300 ease-in-out">
           <li>
             <a
-              href="#"
+              href="#home"
               className="block text-yellow-400 px-3 py-2 font-semibold rounded-md hover:text-white transition duration-300"
             >
               HOME
@@ -91,7 +92,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#about"
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               ABOUT
@@ -99,7 +100,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#services"
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               SERVICES
@@ -107,7 +108,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#products"
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               PRODUCTS
@@ -115,7 +116,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href= ""
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               TESTIMONIAL
