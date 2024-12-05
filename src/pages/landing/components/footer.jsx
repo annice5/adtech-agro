@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import logo from '../../../assets/logo.jpg'
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -43,24 +44,40 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4 text-white">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  About
-                </a>
+                
+                <Link to="about"
+                className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer">
+
+                About
+
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Services
-                </a>
+                
+                <Link to="services"
+                className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer">
+
+                Services
+
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Products
-                </a>
+                
+                <Link to="product"
+                className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer">
+
+                Products
+
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Testimonials
-                </a>
+                
+                <Link to="testimonials"
+                className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer">
+
+                Testimonial
+
+                </Link>
               </li>
             </ul>
           </div>
