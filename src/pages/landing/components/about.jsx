@@ -4,7 +4,7 @@ import aboutTwo from '../../../assets/aboutTwo.jpg';
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center py-16 px-4 md:px-16 bg-gradient-to-r from-green-50 to-white">
+    <section id='about' className="flex flex-col md:flex-row items-center py-16 px-4 md:px-16 bg-gradient-to-r from-green-50 to-white">
       
       {/* Left Section with Images */}
       <div className="relative md:w-1/2 flex mb-8 md:mb-0 md:ml-12">

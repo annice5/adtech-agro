@@ -33,7 +33,7 @@ const Product = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="product" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <h4 className="text-green-700 uppercase text-sm tracking-wide font-semibold text-center mb-2">

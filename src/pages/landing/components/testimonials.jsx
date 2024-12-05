@@ -55,7 +55,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section id="testimonials" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 text-center">
         {/* Section Title */}
         <h4 className="text-green-700 uppercase text-sm tracking-wide font-semibold mb-2">

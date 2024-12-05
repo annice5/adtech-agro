@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import heroOne from '../../../assets/heroOne.jpg';
 import heroTwo from '../../../assets/heroTwo.jpg';
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const images = [heroOne, heroTwo];
@@ -48,9 +49,11 @@ const Hero = () => {
           </p>
           {/* CTA Button */}
           <div>
+            <Link to="services">
             <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-lg font-semibold transform transition duration-300 hover:scale-105">
               Learn More
             </button>
+            </Link>
           </div>
         </div>
       </div>

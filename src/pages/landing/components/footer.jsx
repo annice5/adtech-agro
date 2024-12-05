@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import logo from '../../../assets/logo.jpg'
 
 const Footer = () => {
   return (
@@ -8,12 +9,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 md:gap-0">
           {/* Column 1: Brand and Description */}
           <div className="mb-8 md:mb-0 flex flex-col items-start">
-            <h2 className="text-3xl font-bold mb-4 text-white">AdtechAgro</h2>
-            <p className="text-gray-300 text-lg mb-4">
+            <div  className=" w-40 ">
+              <img src={logo} alt="logo" />
+            </div>
+            <p className="text-gray-300 text-lg mt-5 ">
               Far far away, behind the word mountains, far from the countries.
             </p>
             {/* Social Icons */}
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 mt-5">
               <a
                 href="#"
                 className="bg-white text-green-600 w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-green-500 hover:text-white"

@@ -1,6 +1,7 @@
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
-import Testimonials from "./testimonials";
+import logo from "../../../assets/logo.jpg";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,53 +14,61 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-green-600 to-green-500 text-white shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <span className="text-3xl font-extrabold text-white flex items-center">
-            Adtech<span className="text-yellow-400">Agro</span>
-          </span>
+        <div className="flex items-center space-x-2 size-44">
+          <img src={logo} alt="logo" />
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8">
           <li>
-            <a
-              href="#home"
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
               className="text-yellow-400 px-3 py-2 font-semibold rounded-md hover:text-white transition duration-300"
             >
               HOME
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
-              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
               ABOUT
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
-              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
+            <Link
+              to="services"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
               SERVICES
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#products"
-              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
+            <Link
+              to="product"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
               PRODUCTS
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#testimonials"
-              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
+            <Link
+              to="testimonials"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
               TESTIMONIAL
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -83,44 +92,54 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <ul className="md:hidden bg-gradient-to-r from-green-600 to-green-500 text-white space-y-4 px-4 py-6 transform transition duration-300 ease-in-out">
           <li>
-            <a
-              href="#home"
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
               className="block text-yellow-400 px-3 py-2 font-semibold rounded-md hover:text-white transition duration-300"
             >
               HOME
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               ABOUT
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              to="services"
+              smooth={true}
+              duration={500}
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               SERVICES
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#products"
+            <Link
+              to="product"
+              smooth={true}
+              duration={500}
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               PRODUCTS
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href= ""
+            <Link
+              to="testimonials"
+              smooth={true}
+              duration={500}
               className="block text-gray-300 px-3 py-2 font-semibold rounded-md hover:text-yellow-400 transition duration-300"
             >
               TESTIMONIAL
-            </a>
+            </Link>
           </li>
         </ul>
       )}
