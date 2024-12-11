@@ -14,7 +14,7 @@ const Footer = () => {
               <img src={logo} alt="logo" />
             </div>
             <p className="text-gray-300 text-lg mt-5 ">
-              Far far away, behind the word mountains, far from the countries.
+            Your trusted source for premium poultry feed.
             </p>
             {/* Social Icons */}
             <div className="flex space-x-6 mt-5">
@@ -92,7 +92,7 @@ const Footer = () => {
                 </span>
               </li>
               <li>
-                <span className="text-gray-300">+2 392 3929 210</span>
+                <span className="text-gray-300">0541537190</span>
               </li>
               <li>
                 <span className="text-gray-300">info@yourdomain.com</span>
