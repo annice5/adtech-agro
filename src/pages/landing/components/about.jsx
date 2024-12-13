@@ -63,7 +63,7 @@ const About = () => {
           variants={childVariants}
         >
           <motion.h3
-            className="text-green-600 text-sm font-semibold uppercase tracking-wide mb-2"
+            className="text-green-600 text-sm font-semibold uppercase tracking-wide mb-2 mt-14"
             whileHover={{ scale: 1.1, color: '#047857' }}
           >
             Adtech Agro

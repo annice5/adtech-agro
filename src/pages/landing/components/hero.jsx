@@ -39,12 +39,12 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-[50vh] md:h-screen w-full overflow-hidden">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
             <div
-              className="h-screen bg-cover bg-center"
+              className="h-[50vh] md:h-screen bg-cover bg-center"
               style={{
                 backgroundImage: `url(${image})`,
               }}
@@ -63,18 +63,18 @@ const Hero = () => {
 
       {/* Overlay with Content */}
       <motion.div
-        className="absolute bottom-16 left-10 w-full md:w-auto px-4"
+        className="absolute bottom-10 md:bottom-16 left-4 md:left-10 w-full md:w-auto px-4 md:px-0"
         initial="hidden"
         animate="visible"
         variants={textAnimation}
       >
-        <div className="max-w-lg bg-black/50 backdrop-blur-sm rounded-lg p-6 text-white shadow-lg space-y-4">
+        <div className="max-w-full md:max-w-lg bg-black/50 backdrop-blur-sm rounded-lg p-4 md:p-6 text-white shadow-lg space-y-3 md:space-y-4">
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2 }}
-            className="text-3xl md:text-5xl font-extrabold leading-tight"
+            className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
           >
             Welcome to Adtech Agro Limited
           </motion.h1>
@@ -83,11 +83,10 @@ const Hero = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            className="text-base md:text-lg font-medium"
+            className="text-sm md:text-base lg:text-lg font-medium"
           >
             Processing dry cocoa pod husks into premium quality organic poultry feed
           </motion.p>
-          
         </div>
       </motion.div>
     </div>
