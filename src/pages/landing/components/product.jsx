@@ -1,68 +1,81 @@
+import broilerFinisher from '../../../assets/broilerFinisher.jpeg';
+import layerFinisherMashOne from '../../../assets/layerFinisherMashOne.jpeg';
+import layerFinisherMashTwo from '../../../assets/layerFinisherMashTwo.jpeg';
+import layerGrowerMash from '../../../assets/layerGrowerMash.jpeg';
+import layerStarterMash from '../../../assets/layerStarterMash.jpeg';
+
 const Product = () => {
   const productData = [
     {
       id: 1,
-      image: "https://via.placeholder.com/300x200?text=Project+1",
-      description: "A lush botanical garden filled with tropical plants.",
+      image: broilerFinisher,
+      description: "Broiler Finisher",
+      price: "GH100",
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/300x200?text=Project+2",
-      description: "A modern plant-filled workspace with cozy furniture.",
+      image: layerFinisherMashOne,
+      description: "Layer Finisher Mash One",
+      price: "GH100",
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/300x200?text=Project+3",
-      description: "A serene outdoor space with vibrant flowers.",
+      image: layerFinisherMashTwo,
+      description: "Layer Finisher Mash Two",
+      price: "GH100",
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/300x200?text=Project+4",
-      description: "A cozy plant shop with handcrafted items.",
+      image: layerGrowerMash,
+      description: "Layer Grower Mash",
+      price: 'GH100',
     },
     {
       id: 5,
-      image: "https://via.placeholder.com/300x200?text=Project+5",
-      description: "A greenhouse showcasing eco-friendly farming.",
-    },
-    {
-      id: 6,
-      image: "https://via.placeholder.com/300x200?text=Project+6",
-      description: "A gardener at work in a beautiful backyard.",
+      image: layerStarterMash,
+      description: "Layer Starter Mash",
+      price: 'GH100',
     },
   ];
 
   return (
-    <section id="product" className="py-16 bg-gray-50">
+    <section id="product" className="py-16 bg-gradient-to-r from-green-50 via-white to-green-100">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <h4 className="text-green-700 uppercase text-sm tracking-wide font-semibold text-center mb-2">
           Products
         </h4>
-        <h2 className="text-3xl font-bold text-center mb-12">Explore Our Products</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          Explore Our Premium Products
+        </h2>
 
-        {/* Projects Grid */}
+        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {productData.map((product) => (
             <div
               key={product.id}
-              className="relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 group hover:scale-105 hover:shadow-xl"
+              className="relative bg-white overflow-hidden rounded-lg shadow-md transform transition-all duration-500 group hover:scale-105 hover:shadow-xl"
             >
-              {/* Image */}
+              {/* Product Image */}
               <img
                 src={product.image}
                 alt={`Product ${product.id}`}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 rounded-t-lg"
               />
 
-              {/* Light Green Transparent Background */}
-              <div className="absolute inset-0 bg-green-500 bg-opacity-50 transform scale-0 group-hover:scale-100 transition-all duration-500 rounded-lg"></div>
+              {/* Product Info */}
+              <div className="p-6 text-center">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">{product.description}</h3>
+                
 
-              {/* Hover Description */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4">
-                <p className="text-white text-lg font-medium text-center bg-opacity-75 bg-gray-800 rounded-lg p-4">
-                  {product.description}
-                </p>
+                
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-green-700 bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 className="text-white text-xl font-bold mb-2">{product.description}</h3>
+                <p className="text-white text-lg font-medium mb-4">{product.price}</p>
+                
               </div>
             </div>
           ))}

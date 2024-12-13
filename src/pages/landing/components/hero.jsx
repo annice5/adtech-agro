@@ -1,22 +1,41 @@
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import heroOne from '../../../assets/heroOne.jpg';
-import heroTwo from '../../../assets/heroTwo.jpg';
-import { Link } from "react-scroll";
+import layerFinisherMashOne from '../../../assets/layerFinisherMashOne.jpeg';
+import layerFinisherMashTwo from '../../../assets/layerFinisherMashTwo.jpeg';
+import layerGrowerMash from '../../../assets/layerGrowerMash.jpeg';
+import layerStarterMash from '../../../assets/layerStarterMash.jpeg';
+import broilerFinisher from '../../../assets/broilerFinisher.jpeg';
 
 const Hero = () => {
-  const images = [heroOne, heroTwo];
+  const images = [
+    layerFinisherMashOne,
+    layerFinisherMashTwo,
+    layerGrowerMash,
+    layerStarterMash,
+    broilerFinisher,
+  ];
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000,
-    fade: true,
+    autoplaySpeed: 3000,
+    rtl: true,
+  };
+
+  const textAnimation = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
+  const overlayAnimation = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1.5 } },
   };
 
   return (
@@ -30,33 +49,47 @@ const Hero = () => {
                 backgroundImage: `url(${image})`,
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-green-600/50 via-green-300/40 to-transparent"></div>
+              {/* Green Gradient Overlay */}
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={overlayAnimation}
+                className="absolute inset-0 bg-gradient-to-b from-green-100/10 via-gray-400/10 to-transparent"
+              ></motion.div>
             </div>
           </div>
         ))}
       </Slider>
 
       {/* Overlay with Content */}
-      <div className="absolute top-0 left-0 h-full w-full bg-black bg-opacity-50 flex items-center justify-center px-4">
-        <div className="max-w-3xl px-8 text-white text-center md:text-left space-y-6">
+      <motion.div
+        className="absolute bottom-16 left-10 w-full md:w-auto px-4"
+        initial="hidden"
+        animate="visible"
+        variants={textAnimation}
+      >
+        <div className="max-w-lg bg-black/50 backdrop-blur-sm rounded-lg p-6 text-white shadow-lg space-y-4">
           {/* Heading */}
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-shadow-md">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2 }}
+            className="text-3xl md:text-5xl font-extrabold leading-tight"
+          >
             Welcome to Adtech Agro Limited
-          </h1>
+          </motion.h1>
           {/* Subtext */}
-          <p className="text-lg md:text-2xl font-medium text-shadow-sm">
+          <motion.p
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="text-base md:text-lg font-medium"
+          >
             Processing dry cocoa pod husks into premium quality organic poultry feed
-          </p>
-          {/* CTA Button */}
-          <div>
-            <Link to="services">
-            <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-lg font-semibold transform transition duration-300 hover:scale-105">
-              Learn More
-            </button>
-            </Link>
-          </div>
+          </motion.p>
+          
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
