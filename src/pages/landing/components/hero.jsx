@@ -68,7 +68,7 @@ const Hero = () => {
         animate="visible"
         variants={textAnimation}
       >
-        <div className="max-w-full md:max-w-lg bg-black/50 backdrop-blur-sm rounded-lg p-4 md:p-6 text-white shadow-lg space-y-3 md:space-y-4">
+        <div className="max-w-full md:max-w-md bg-black/50 backdrop-blur-sm rounded-lg p-4 md:p-6 text-white shadow-lg space-y-3 md:space-y-4">
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
