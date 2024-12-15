@@ -3,6 +3,7 @@ import layerFinisherMashOne from '../../../assets/layerFinisherMashOne.jpeg';
 import layerFinisherMashTwo from '../../../assets/layerFinisherMashTwo.jpeg';
 import layerGrowerMash from '../../../assets/layerGrowerMash.jpeg';
 import layerStarterMash from '../../../assets/layerStarterMash.jpeg';
+import broilerGrower from '../../../assets/broilerGrower.jpeg';
 
 const Product = () => {
   const productData = [
@@ -10,31 +11,37 @@ const Product = () => {
       id: 1,
       image: broilerFinisher,
       description: "Broiler Finisher",
-      price: "GH100",
+      price: "GH270",
     },
     {
       id: 2,
       image: layerFinisherMashOne,
       description: "Layer Finisher Mash One",
-      price: "GH100",
+      price: "GH250",
     },
     {
       id: 3,
       image: layerFinisherMashTwo,
       description: "Layer Finisher Mash Two",
-      price: "GH100",
+      price: "GH270",
     },
     {
       id: 4,
       image: layerGrowerMash,
       description: "Layer Grower Mash",
-      price: 'GH100',
+      price: 'GH250',
     },
     {
       id: 5,
       image: layerStarterMash,
       description: "Layer Starter Mash",
-      price: 'GH100',
+      price: 'GH250',
+    },
+    {
+      id: 6,
+      image:broilerGrower,
+      description: "Broiler Grower",
+      price: 'GH270',
     },
   ];
 

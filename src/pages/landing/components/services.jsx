@@ -1,35 +1,43 @@
-import { GitCompareArrows, ShoppingBasket, Truck, WindArrowDown } from "lucide-react";
+import { BaggageClaim, GitCompareArrows, ShoppingBasket, Truck, WindArrowDown } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Processing",
-      description: "A small river named Duden flows by their place and supplies.",
+      title: "Sourcing and Collection",
+      description: "Cocoa pod husks are collected from local farms or processing facilities after cocoa beans are removed. They are then transported to a processing facility for further use.",
       icon: (
         <GitCompareArrows className="w-12 h-12 text-white transform transition-transform duration-300 hover:scale-110" />
       ),
     },
     {
       id: 2,
-      title: "Preparing",
-      description: "A small river named Duden flows by their place and supplies.",
+      title: "Cleaning and Drying",
+      description: "The husks are cleaned to remove dirt and then dried to reduce moisture, ensuring they stay fresh and don’t spoil.",
       icon: (
         <WindArrowDown className="w-12 h-12 text-white transform transition-transform duration-300 hover:scale-110" />
       ),
     },
     {
       id: 3,
-      title: "Producing",
-      description: "A small river named Duden flows by their place and supplies.",
+      title: "Grinding and Blending",
+      description: "The dried husks are ground into fine particles and then blended with ingredients like proteins, vitamins, and minerals to make a balanced poultry feed.",
       icon: (
         <ShoppingBasket className="w-12 h-12 text-white transform transition-transform duration-300 hover:scale-110" />
       ),
     },
     {
       id: 4,
-      title: "Delivering",
-      description: "A small river named Duden flows by their place and supplies.",
+      title: "Pelletizing or Granulation",
+      description: "The blended feed is shaped into pellets or granules, making it stronger, reducing waste, and easier to handle and store.",
+      icon: (
+        <BaggageClaim  className="w-12 h-12 text-white transform transition-transform duration-300 hover:scale-110"/>
+      ),
+    },
+    {
+      id: 4,
+      title: "Packaging and Distribution",
+      description: "The feed is packed in strong bags to stay fresh and is then distributed  for use.",
       icon: (
         <Truck className="w-12 h-12 text-white transform transition-transform duration-300 hover:scale-110" />
       ),
