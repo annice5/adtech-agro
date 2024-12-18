@@ -11,37 +11,37 @@ const Product = () => {
       id: 1,
       image: broilerFinisher,
       description: "Broiler Finisher",
-      price: "GH270",
+      price: "GH270.00",
     },
     {
       id: 2,
       image: layerFinisherMashOne,
       description: "Layer Finisher Mash One",
-      price: "GH250",
+      price: "GH250.00",
     },
     {
       id: 3,
       image: layerFinisherMashTwo,
       description: "Layer Finisher Mash Two",
-      price: "GH270",
+      price: "GH270.00",
     },
     {
       id: 4,
       image: layerGrowerMash,
       description: "Layer Grower Mash",
-      price: 'GH250',
+      price: 'GH250.00',
     },
     {
       id: 5,
       image: layerStarterMash,
       description: "Layer Starter Mash",
-      price: 'GH250',
+      price: 'GH250.00',
     },
     {
       id: 6,
       image:broilerGrower,
       description: "Broiler Grower",
-      price: 'GH270',
+      price: 'GH270.00',
     },
   ];
 
@@ -81,7 +81,7 @@ const Product = () => {
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-green-700 bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <h3 className="text-white text-xl font-bold mb-2">{product.description}</h3>
-                <p className="text-white text-lg font-medium mb-4">{product.price}</p>
+                <p className="text-white text-lg font-extrabold mb-4">{product.price}</p>
                 
               </div>
             </div>
